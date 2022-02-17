@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class ControlFlowExercises {
     public static void main(String[] args) {
 
@@ -50,15 +52,19 @@ public class ControlFlowExercises {
         //For numbers which are multiples of both three and five: print “FizzBuzz”.
 
         for(int i = 1; i <= 100; i++) {
-            if(i % 3 == 1) {   System.out.println("Fizz");
-            }else {if (i % 5 == 1){
-                System.out.println("Buzz");
-            }else {
-                System.out.println(i);}
+            if(i % 3 == 0 & i % 5==0) {
+                System.out.println("Fizz Buzz");
+            }else if (i % 3 == 0){
+                System.out.println("fizzuzz");
+            }else if (i % 5 ==0){
+                System.out.println("buzz");}
+            else {
+                System.out.println(i);
+            }
 
             }
 
-        }
+
 
 
 //        Display a table of powers.
@@ -68,7 +74,38 @@ public class ControlFlowExercises {
 //Ask if the user wants to continue.
 //Assume that the user will enter valid data.
 //Only continue if the user agrees to.
+//        Scanner
+//        String leftAlignFormat = "| %-15s | %-4d |%n";
+//
+//        System.out.format("+-----------------+------+%n");
+//        System.out.format("| Column name     | ID   |%n");
+//        System.out.format("+-----------------+------+%n");
+//        for (int i = 0; i < 5; i++) {
+//            System.out.format(leftAlignFormat, "some data" + i, i * i);
+//        }
+//        System.out.format("+-----------------+------+%n");
 
+
+
+
+
+
+
+
+//        Convert given number grades into letter grades.
+//
+//Prompt the user for a numerical grade from 0 to 100.
+//Display the corresponding letter grade.
+//Prompt the user to continue.
+//Assume that the user will enter valid integers for the grades.
+//The application should only continue if the user agrees to.
+//Grade Ranges:
+//
+//A : 100 - 88
+//B : 87 - 80
+//C : 79 - 67
+//D : 66 - 60
+//F : 59 - 0
 
 
 
