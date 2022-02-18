@@ -14,10 +14,10 @@ public class ControlFlowExercises {
         //Your output should look like this:
         //
         //5 6 7 8 9 10 11 12 13 14 15
-//        int i = 0;
-//        while (i <= 15) {
-//            System.out.println("i is " + i);
-//            i++;
+        int i = 0;
+        while (i <= 15) {
+            System.out.print( " " +i);
+            i++;}
 
 //          B.  Do While
 //
@@ -51,18 +51,18 @@ public class ControlFlowExercises {
         //For the multiples of five: print “Buzz”.
         //For numbers which are multiples of both three and five: print “FizzBuzz”.
 
-        for(int i = 1; i <= 100; i++) {
-            if(i % 3 == 0 & i % 5==0) {
-                System.out.println("Fizz Buzz");
-            }else if (i % 3 == 0){
-                System.out.println("fizzuzz");
-            }else if (i % 5 ==0){
-                System.out.println("buzz");}
-            else {
-                System.out.println(i);
-            }
-
-            }
+//        for(int i = 1; i <= 100; i++) {
+//            if(i % 3 == 0 & i % 5==0) {
+//                System.out.println("Fizz Buzz");
+//            }else if (i % 3 == 0){
+//                System.out.println("fizzuzz");
+//            }else if (i % 5 ==0){
+//                System.out.println("buzz");}
+//            else {
+//                System.out.println(i);
+//            }
+//
+//            }
 
 
 
