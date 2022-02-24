@@ -19,6 +19,25 @@ public class ConsoleExercises {
 //
 //        System.out.printf(userIn + "%n" + userIn2 + "%n" + userIn3);
 
+        //3. Prompt the user to enter a sentence
+        Scanner sc = new Scanner(System.in);
+        System.out.println("please enter a sentence");
+        String sentence = sc.nextLine();
+        System.out.println("you just worte : " + sentence);
+
+
+        // calculate perimeter of classroom
+        Scanner scanner2 = new Scanner(System.in);
+
+        System.out.println("enter the length of your room:  ");
+        String userLength = scanner.nextLine();
+
+        System.out.println("enter the height of your room : ");
+        String userWidth = scanner.nextLine();
+
+        System.out.println("enter the height of your room : ");
+
+
 
 
     }
