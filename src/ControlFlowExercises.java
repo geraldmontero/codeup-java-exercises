@@ -13,11 +13,11 @@ public class ControlFlowExercises {
         //Each loop iteration, output the current value of i, then increment i by one.
         //Your output should look like this:
         //
-        //5 6 7 8 9 10 11 12 13 14 15
-        int i = 0;
-        while (i <= 15) {
-            System.out.print( " " +i);
-            i++;}
+//        //5 6 7 8 9 10 11 12 13 14 15
+//        int i = 0;
+//        while (i <= 15) {
+//            System.out.print( " " +i);
+//            i++;}
 
 //          B.  Do While
 //
@@ -55,7 +55,7 @@ public class ControlFlowExercises {
 //            if(i % 3 == 0 & i % 5==0) {
 //                System.out.println("Fizz Buzz");
 //            }else if (i % 3 == 0){
-//                System.out.println("fizzuzz");
+//                System.out.println("fizz");
 //            }else if (i % 5 ==0){
 //                System.out.println("buzz");}
 //            else {
@@ -92,6 +92,8 @@ public class ControlFlowExercises {
 
 
 
+
+
 //        Convert given number grades into letter grades.
 //
 //Prompt the user for a numerical grade from 0 to 100.
@@ -106,7 +108,69 @@ public class ControlFlowExercises {
 //C : 79 - 67
 //D : 66 - 60
 //F : 59 - 0
+//        Scanner scanner = new Scanner(System.in);
+//
+//        System.out.print("Enter an integer: ");
+//        int userInt = scanner.nextInt();
+//
+//        System.out.print("Do you want to continue? y or n : ");
+//        String userInput = scanner.next();
+//
+//        if (!userInput.equals("y")) {
+//            System.out.print("Bye Felicia!");
+//        } else {
+//            System.out.println();
+//            System.out.println("Here is your table!" + "\n");
+//            System.out.println("number | squared  | cubed");
+//            System.out.println("------ | -------  | -----");
+//            for (int i = 1; i <= 3; i++) {
+//                System.out.println(i + "      | " + (i * i) + "        | " + (i * i * i));
+//            }
+//            for (int i = 4; i <= 9; i++) {
+//                System.out.println(i + "      | " + (i * i) + "       | " + (i * i * i));
+//            }
+//            for (int i = 10; i <= 31; i++) {
+//                System.out.println(i + "     | " + (i * i) + "      | " + (i * i * i));
+//            }
+//            for (int i = 32; i <= 99; i++) {
+//                System.out.println(i + "     | " + (i * i) + "     | " + (i * i * i));
+//            }
+//            for (int i = 100; i <= userInt; i++) {
+//                System.out.println(i + "    | " + (i * i) + "    | " + (i * i * i));
+//            }
+//        }
 
+        //grade letter conversion
+
+//        Scanner scanner = new Scanner(System.in);
+//
+//        System.out.print("Enter your grade (0-100): ");
+//        int userGrade = scanner.nextInt();
+//
+//        System.out.println("You entered: " + userGrade);
+//
+//        System.out.print("Do you want to continue? y or n : ");
+//        String userInput = scanner.next();
+//
+//        if (!userInput.equals("y")) {
+//            System.out.println("Bye Felicia!");
+//        } else {
+//            if (userGrade >= 98) {
+//                System.out.println("A+");
+//            } else if (userGrade >= 88) {
+//                System.out.println("A");
+//            } else if (userGrade >= 85) {
+//                System.out.println("B+");
+//            } else if (userGrade >= 80) {
+//                System.out.println("B");
+//            } else if (userGrade >= 67) {
+//                System.out.println("C");
+//            } else if (userGrade >= 60) {
+//                System.out.println("D");
+//            }else {
+//                System.out.println("F");
+//            }
+//        }
 
 
     }
