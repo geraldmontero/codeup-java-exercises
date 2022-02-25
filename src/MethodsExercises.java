@@ -7,7 +7,7 @@ public class MethodsExercises {
         System.out.println(multiNums());
         System.out.println(divNums());
         System.out.println(modulus());
-        System.out.println(getInteger(4,9));
+        System.out.println(getInteger());
     }
 //    Basic Arithmetic
 //
@@ -76,51 +76,53 @@ public static long modulus(){
 //The method signature should look like this:
 //
 //
-public static int getInteger(int min, int max){
-     Scanner sc3 = new Scanner(System.in);
+public static int getInteger() {
+    Scanner sc3 = new Scanner(System.in);
     System.out.print("Enter a number between 1 and 10: ");
-    if (min>0 & max<10){
+    int userInput = sc3.nextInt();
+    if (userInput >= 1 & userInput <= 10) {
         System.out.println("in range");
+    } else {
+        System.out.println("out of Range");
+//
     }
-    return min;
+    return getInteger();
+
+
 }
-//and is used like this:
-//
-//
-//
-//int userInput = getInteger(1, 10);
-//If the input is invalid, prompt the user again.
-//
-//Hint: recursion might be helpful here!
-//
-//Calculate the factorial of a number.
-//
-//Prompt the user to enter an integer from 1 to 10.
-//Display the factorial of the number entered by the user.
-//Ask if the user wants to continue.
-//Use a for loop to calculate the factorial.
-//Assume that the user will enter an integer, but verify it’s between 1 and 10.
-//Use the long type to store the factorial.
-//Continue only if the user agrees to.
-//A factorial is a number multiplied by each of the numbers before it.
-//Factorials are denoted by the exclamation point (n!). Ex:
-//
-//
-//1! = 1               = 1
-//2! = 1 x 2           = 2
-//3! = 1 x 2 x 3       = 6
-//4! = 1 x 2 x 3 x 4   = 24
-//Bonus
-//
-//Test the application and find the integer for the highest factorial that can be accurately calculated by this application, then modify the prompt so that it prompts the user for a number "from 1 to {the highest integer that returns accurate factorial calculation}". Don’t forget to change your verification too!
-//Use recursion to implement the factorial.
-//Create an application that simulates dice rolling.
-//
-//Ask the user to enter the number of sides for a pair of dice.
-//Prompt the user to roll the dice.
-//"Roll" two n-sided dice, display the results of each, and then ask the user if he/she wants to roll the dice again.
-//Use static methods to implement the method(s) that generate the random numbers.
-//Use the .random method of the java.lang.Math class to generate random numbers.
+    // FACTORIAL
+    public static void factorial() {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter a number between 1 and 20: ");
+        int userInput = scanner.nextInt();
+        if (userInput >= 1 && userInput <= 20) {
+            System.out.println("You entered: " + userInput);
+            System.out.print("Do you want to continue? (y or n): ");
+            String userContinue = scanner.next();
+            if (!userContinue.equals("y")) {
+                System.out.println("Have an average day.");
+            } else {
+                long sum = 1;
+                for (long i = 1; i <= userInput; i++) {
+                    System.out.printf("%d%s%d%n", i, "! = ", (sum *= i));
+                }
+            }
+        } else {
+            System.out.println("Your entry is not valid");
+        }
+    }
+
+//RECURSION
+
+    public static int recursion(int num) {
+        if (num == 1) {
+            return 1;
+        } else {
+            return num * recursion(num - 1);
+        }
+    }
+
 //Game Development 101
 //
 //Welcome to the world of game development!
@@ -138,7 +140,37 @@ public static int getInteger(int min, int max){
 //Hints
 //
 //Use the random method of the java.lang.Math class to generate a random number.
+//  DICE GAME
 
+    public static void dice() {
+
+        Scanner diceGame = new Scanner(System.in);
+
+        System.out.print("How many sides do your dice have? ");
+        int diceSides = diceGame.nextInt();
+
+        System.out.print("Would you like to roll the dice? (y/n)  ");
+        String roll = diceGame.next();
+
+        boolean diceBoolean = true;
+
+        while (diceBoolean) {
+            int randomNum = (int)(Math.random() * diceSides)+1;
+            int randomNum2 = (int)(Math.random() * diceSides)+1;
+            if (!roll.equals("y")) {
+                System.out.println("No dice for you!");
+                diceBoolean = false;
+            } else {
+                System.out.println(randomNum);
+                System.out.println(randomNum2);
+                System.out.print("Would you like to roll the dice again? (y/n)  ");
+                String rollAgain = diceGame.next();
+                if(!rollAgain.equals("y")){
+                    diceBoolean = false;
+                }
+            }
+        }
+    }
 
 
 
