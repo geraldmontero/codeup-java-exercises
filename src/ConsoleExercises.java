@@ -30,12 +30,24 @@ public class ConsoleExercises {
         Scanner scanner2 = new Scanner(System.in);
 
         System.out.println("enter the length of your room:  ");
-        String userLength = scanner.nextLine();
+        String userLength = scanner2.nextLine();
+
+        System.out.println("enter the width of your room : ");
+        String userWidth = scanner2.nextLine();
 
         System.out.println("enter the height of your room : ");
-        String userWidth = scanner.nextLine();
+        String userHeight = scanner2.nextLine();
+        float userLengthInt = Float.parseFloat(userLength);
 
-        System.out.println("enter the height of your room : ");
+        float userWidthInt = Float.parseFloat(userWidth);
+
+        float userHeightInt = Float.parseFloat(userHeight);
+
+        System.out.printf("the area of your room is : %.2f%s%n" , (userLengthInt * userWidthInt), "square feet.");
+        System.out.printf("the perimeter of your room is : %.2f%s%n" , ((userLengthInt * 2) + (userWidthInt *2 ) ), " feet.");
+        System.out.printf("the volume of your room is : %.2f%s%n" , (userLengthInt * userWidthInt * userHeightInt), " cubic feet.");
+
+        scanner2.useDelimiter("\n");
 
 
 
