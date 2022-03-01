@@ -61,7 +61,7 @@ public class arrayLecture {
         // // where and how do we call the method --> in PSVM
         // // sout the result of the sumAll method
 
-        Public static int SumNums(){
+//        Public static int SumNums(){
 
 
 
@@ -80,6 +80,6 @@ public class arrayLecture {
 
 
 
-    }
+//    }
 
 }
