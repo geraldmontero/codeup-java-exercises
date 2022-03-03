@@ -2,8 +2,8 @@ package shapes;
 
 public class Rectangle {
 
-    protected static int rectLength = 8;
-    protected static  int rectWidth = 10;
+    protected static int rectLength ;
+    protected static  int rectWidth ;
 
     // Define a constructor that accepts two numbers for length and width, and sets those properties
     public Rectangle(int rectLength, int rectWidth) {
