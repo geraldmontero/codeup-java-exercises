@@ -1,11 +1,9 @@
 public class Person {
-    public Person() {
 
-    }
 
-    public static void main(String[] args) {
+//    public static void main(String[] args) {
 
-    }
+    //}
     private String name;
 
     public Person(String name) {
@@ -16,7 +14,14 @@ public class Person {
         return String.format("%s says hello!", this.name);
     }
 
-//    Understanding references
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+    //    Understanding references
 //
 //The following code blocks make use of the Person class from the previous exercise. For each code block, think about what the code will output, then copy the code into IntelliJ and run it to see if it matches your expectations.
 //
