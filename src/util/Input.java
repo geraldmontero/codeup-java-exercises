@@ -11,7 +11,7 @@ public class Input {
          scanner = new Scanner(System.in);
      };
      public String getString(){
-//         System.out.println("Enter a String");
+         System.out.println("Enter a String");
          return scanner.nextLine();
      };
 
@@ -32,7 +32,7 @@ public class Input {
             return this.scanner.nextInt();
 
         }
-        double getDouble(double min, double max){
+        public double getDouble(double min, double max){
             Double userDouble;
             do{
                 System.out.printf("please enter a decimal between %f and %f: %n", min,max);
@@ -42,7 +42,7 @@ public class Input {
 
 
         }
-        double getDouble(){
+       public double getDouble(){
             return this.scanner.nextDouble();
 
         }
