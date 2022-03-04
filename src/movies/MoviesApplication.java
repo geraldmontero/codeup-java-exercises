@@ -2,6 +2,8 @@ package movies;
 
 import util.Input;
 
+import java.sql.SQLOutput;
+
 import static movies.MoviesArray.findAll;
 
 public class MoviesApplication {
@@ -29,10 +31,21 @@ public static void main(String[] args) {
     } else if (userInput.equals("1")) {
         Movie[] mList = findAll();
         for(Movie pMovie:mList){
-            System.out.println(pMovie.getMovieName());
+            System.out.println(pMovie.getMovieName() + "---" + pMovie.getCategoryName());
         }
+       repeat();
 
     } else if (userInput.equals("2")) {
+        Movie[] mList = findAll();
+        for (Movie pMovie : mList) {
+            if (pMovie.getCategoryName().equals("animated")) {
+                System.out.println((pMovie.getMovieName() + " -----" + pMovie.getCategoryName()));
+            } else {
+                continue;
+            }
+        }
+        repeat();
+    }
 
 
     } else if (userInput.equals("3")) {
@@ -40,5 +53,27 @@ public static void main(String[] args) {
     } else if (userInput.equals("4")) {
     } else if (userInput.equals("5")) {
     }
+}
+private static void repeat(){
+    System.out.println("---------");
+    System.out.println("Choices");
+    System.out.println("0- Exit 1- all 2- animated 3- drama 4- Horror 5-scifi ");
+
+    System.out.println("enter your choice:");
+    Input in = new Input();
+    String userInput = in.getString();
+
+    if (userInput.equals("0")) {
+        System.out.println("goodbye");
+
+    } else if (userInput.equals("1")) {
+        Movie[] mList = findAll();
+        for(Movie pMovie:mList){
+            System.out.println(pMovie.getMovieName() + "---" + pMovie.getCategoryName());
+        }
+        repeat();
+
+}
+
 }
 }
