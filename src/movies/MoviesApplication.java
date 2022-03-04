@@ -1,5 +1,9 @@
 package movies;
 
+import util.Input;
+
+import static movies.MoviesArray.findAll;
+
 public class MoviesApplication {
 //Give the user a list of options for viewing all the movies or viewing movies by category.
 //Use your Input class to get input from the user, and display information based on their choice. (Remember to import your Input class)
@@ -8,7 +12,33 @@ public class MoviesApplication {
 public static void main(String[] args) {
     System.out.println("welcome to the movie app");
     System.out.println("Please make a selection");
-    System.out.println();
-}
+    System.out.println(" 0 Exit");
+    System.out.println("1 to see full movie list");
+    System.out.println("2 to see animated movies");
+    System.out.println("3 to see drama movies");
+    System.out.println("4 to see Horror movies");
+    System.out.println("5 to see SciFi movies");
 
+    System.out.println("enter your choice:");
+    Input in = new Input();
+    String userInput = in.getString();
+
+    if (userInput.equals("0")) {
+        System.out.println("goodbye");
+
+    } else if (userInput.equals("1")) {
+        Movie[] mList = findAll();
+        for(Movie pMovie:mList){
+            System.out.println(pMovie.getMovieName());
+        }
+
+    } else if (userInput.equals("2")) {
+
+
+    } else if (userInput.equals("3")) {
+
+    } else if (userInput.equals("4")) {
+    } else if (userInput.equals("5")) {
+    }
+}
 }
