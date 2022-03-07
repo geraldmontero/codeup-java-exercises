@@ -45,13 +45,37 @@ public static void main(String[] args) {
             }
         }
         repeat();
-    }
+
 
 
     } else if (userInput.equals("3")) {
+        Movie[] mList = findAll();
+        for (Movie pMovie : mList) {
+            if (pMovie.getCategoryName().equals("drama")) {
+                System.out.println((pMovie.getMovieName() + " -----" + pMovie.getCategoryName()));
+            } else {
+                continue;
+            }
 
     } else if (userInput.equals("4")) {
+            Movie[] mList = findAll();
+            for (Movie pMovie : mList) {
+                if (pMovie.getCategoryName().equals("horror")) {
+                    System.out.println((pMovie.getMovieName() + " -----" + pMovie.getCategoryName()));
+                } else {
+                    continue;
+                }
+
+        }
     } else if (userInput.equals("5")) {
+            Movie[] mList = findAll();
+            for (Movie pMovie : mList) {
+                if (pMovie.getCategoryName().equals("scifi")) {
+                    System.out.println((pMovie.getMovieName() + " -----" + pMovie.getCategoryName()));
+                } else {
+                    continue;
+                }
+        }
     }
 }
 private static void repeat(){
