@@ -47,6 +47,7 @@ public class Input {
 
         }
 
-
+Integer.valueOf(String s);
+Double.valueOf(String s);
 
 }
